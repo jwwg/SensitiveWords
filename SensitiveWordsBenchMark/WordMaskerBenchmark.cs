@@ -9,7 +9,7 @@ namespace SensitiveWordsBenchMark
         private string _testMessage;
 
         [Params(1,10,100)]
-        public int N;
+        public int StringLength;
 
         private readonly WordMasker _wordMasker = new WordMasker(new DummyWordService());
         private List<SensitiveWord> _data;
@@ -19,7 +19,7 @@ namespace SensitiveWordsBenchMark
         public void GlobalSetup()
         {
             _data = new DummyWordService().BadWords().Result;
-            _testMessage = string.Join(" ",Enumerable.Range(1, N).
+            _testMessage = string.Join(" ",Enumerable.Range(1, StringLength).
                 Select(x => "SELECT * FROM BobbyTables; DROP DATABASE").
                 ToArray());
 

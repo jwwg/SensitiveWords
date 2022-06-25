@@ -39,9 +39,13 @@ Performance enhancements
 - That said, I'd consider building cached data into a tree, then traversing this tree and matching character by character
 
 
-Benchmark current performance (work mask only)
+Benchmark (mask function only)
 ----------------------------------------------
+```
+StringLength indicates number of concatenated input strings, with the seed string :
+SELECT * FROM BobbyTables; DROP DATABASE
 
+```
 ``` ini
 
 BenchmarkDotNet=v0.13.1, OS=Windows 10.0.19043.1766 (21H1/May2021Update)
@@ -52,6 +56,14 @@ Intel Core i7-6700 CPU 3.40GHz (Skylake), 1 CPU, 8 logical and 4 physical cores
 
 
 ```
+|       Method | StringLength |        Mean |     Error |    StdDev | Ratio |
+|------------- |------------- |------------:|----------:|----------:|------:|
+| **ParseMessage** |            **1** |    **50.20 μs** |  **0.581 μs** |  **0.515 μs** |  **1.00** |
+|              |              |             |           |           |       |
+| **ParseMessage** |           **10** |   **287.57 μs** |  **1.595 μs** |  **1.492 μs** |  **1.00** |
+|              |              |             |           |           |       |
+| **ParseMessage** |          **100** | **2,482.37 μs** | **19.106 μs** | **17.871 μs** |  **1.00** |
+
 |       Method |   N |        Mean |     Error |    StdDev | Ratio |
 |------------- |---- |------------:|----------:|----------:|------:|
 | **ParseMessage** |   **1** |    **50.81 μs** |  **0.426 μs** |  **0.378 μs** |  **1.00** |
