@@ -64,19 +64,18 @@ Intel Core i7-6700 CPU 3.40GHz (Skylake), 1 CPU, 8 logical and 4 physical cores
 |              |              |             |           |           |       |
 | **ParseMessage** |          **100** | **2,482.37 μs** | **19.106 μs** | **17.871 μs** |  **1.00** |
 
-|       Method |   N |        Mean |     Error |    StdDev | Ratio |
-|------------- |---- |------------:|----------:|----------:|------:|
-| **ParseMessage** |   **1** |    **50.81 μs** |  **0.426 μs** |  **0.378 μs** |  **1.00** |
-|              |     |             |           |           |       |
-| **ParseMessage** |  **10** |   **279.19 μs** |  **3.843 μs** |  **3.595 μs** |  **1.00** |
-|              |     |             |           |           |       |
-| **ParseMessage** | **100** | **2,680.38 μs** | **35.088 μs** | **32.821 μs** |  **1.00** |
-
-
-
 
 Deployment
 ----------
+(assuming split into two services, with Redis cache)
+Configure two kubernetes pod's - one for external and one for internal use. 
+Put external behind nginx reverse proxy.
+Both pods would need access to the same Redis cache.
+The external pod in particular should be configured to be horizontally scalable.
+
+
+ 
+
 
 
 
