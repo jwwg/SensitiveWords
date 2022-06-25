@@ -28,7 +28,7 @@ namespace SensitiveWords.Controllers
         /// <summary>
         /// Adds a word to list of sensitive words. Returns an error if the word already exists.
         /// </summary>
-        /// <param name="word"></param>
+        /// <param name="word">A sensitive word to add</param>
         /// <returns></returns>
         [HttpPost(Name = "PostWord")]
         public async Task<IActionResult> Post(string? word)

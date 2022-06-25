@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SensitiveWords", "SensitiveWords\SensitiveWords.csproj", "{D215E960-2BCE-4FEF-A77F-E9275D686931}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SensitiveWords", "SensitiveWords\SensitiveWords.csproj", "{D215E960-2BCE-4FEF-A77F-E9275D686931}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SensitiveWordsTests", "SensitiveWordsTests\SensitiveWordsTests.csproj", "{85F54B97-7952-4A9D-B96C-FD506B9275A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SensitiveWordsBenchMark", "SensitiveWordsBenchMark\SensitiveWordsBenchMark.csproj", "{9194D35F-2FBB-4178-8C5F-618D5866F120}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{D215E960-2BCE-4FEF-A77F-E9275D686931}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D215E960-2BCE-4FEF-A77F-E9275D686931}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D215E960-2BCE-4FEF-A77F-E9275D686931}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85F54B97-7952-4A9D-B96C-FD506B9275A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85F54B97-7952-4A9D-B96C-FD506B9275A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85F54B97-7952-4A9D-B96C-FD506B9275A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85F54B97-7952-4A9D-B96C-FD506B9275A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9194D35F-2FBB-4178-8C5F-618D5866F120}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9194D35F-2FBB-4178-8C5F-618D5866F120}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9194D35F-2FBB-4178-8C5F-618D5866F120}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9194D35F-2FBB-4178-8C5F-618D5866F120}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

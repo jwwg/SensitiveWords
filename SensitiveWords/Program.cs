@@ -1,29 +1,8 @@
-using Microsoft.OpenApi.Models;
+using SensitiveWords;
 using SensitiveWords.Model;
-using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
-
-builder.Services.AddControllers();
-builder.Services.AddEndpointsApiExplorer();
-
-builder.Services.AddSwaggerGen(options =>
-{
-    options.SwaggerDoc("v1", new OpenApiInfo
-    {
-        Version = "v1",
-        Title = "Sensitive Words",
-        Description = "An API for maintaining and applying a list of inappropriate words",
-    });
-
-    var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-    options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
-
-});
-
-builder.Services.AddDbContext<DatabaseContext>();
-builder.Services.AddScoped<IWordMasker, WordMasker>();
-
+SensitiveWordsBuilderSetup.Configure(builder);
 var app = builder.Build();
 
 
@@ -45,3 +24,4 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
 app.Run();
+

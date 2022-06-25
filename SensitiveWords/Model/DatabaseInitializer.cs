@@ -13,7 +13,7 @@
 			databaseContext.SaveChanges();
 		}
 
-        private static string[] SeedWords()
+        public static string[] SeedWords()
         {
 			return new string[]
 			{
